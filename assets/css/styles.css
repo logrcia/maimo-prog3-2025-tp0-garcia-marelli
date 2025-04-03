@@ -1,0 +1,273 @@
+*{
+    box-sizing: content-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.kanit-light {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .kanit-regular {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .kanit-bold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  h1, h2, h3, h4, li, a{
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #281525;
+  }
+
+  h1{
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 600;
+  }
+  h2{
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 600;
+  }
+
+  h3{
+    font-size: 20px;
+  }
+
+  h4{
+    font-size: 16px;
+  }
+
+  li{
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #a7c0a2;
+}
+
+header ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+header a{
+    text-decoration: none;
+    color:#281525
+}
+
+header nav li, .ingredients_list, .recipe_tags li{
+    padding: 0;
+    list-style: none;
+}
+
+header .logo_container img{
+    width: 70px;
+}
+
+.receta img{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #281525;
+}
+
+.receta a{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #281525;
+    color: #281525;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.receta a:hover{
+    background-color: #281525;
+    color: #F0EADD;
+}
+
+.hero{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../imgs/cooking-img.jpg");
+    background-size: contain;
+    background-position: center;
+}
+
+
+.recetas_grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+.boxed{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.receta{
+    grid-column: span 3;
+    background-color: #F0EADD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #281525;
+}
+
+
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #F0EADD;
+    bottom: 0;
+    left: 0;
+    margin-top: 30px;
+    width: 100%; 
+}
+
+
+.home_btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #6E8679;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    border: 1px solid #6E8679;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.home_btn:hover {
+    background-color: #6E8679;
+    color: white;
+}
+
+.recipe_main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.recipe_card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe_content{
+    width: 500px;
+}
+
+.recipe_title{
+    margin: 0 auto;
+}
+
+
+.recipe_img {
+    width: 450px;
+    height: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #281525;
+}
+
+.image{
+    width: 450px;
+}
+
+.recipe_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bold_text{
+    font-weight: 600;
+}
+
+.recipe_boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.boxes{
+    width: 100px;
+    background-color: #FFFAF0;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.ingre-inst{
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+.recipe_ingredients{
+    width: 30%;
+    background-color: #FFFAF0;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe_instructions{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 60%;
+}
+
+.recipe_instructions h2{
+    text-align: center;
+}
+
+.recipe_tags{
+    display: flex;
+}
+
+.recipe_tags li{
+    margin-right: 20px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid #6E8679;
+    color: #6E8679;
+}
+
