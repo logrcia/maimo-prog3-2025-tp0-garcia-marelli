@@ -16,11 +16,11 @@ const main = async () => {
   recipeTitle.innerHTML = recipe.name;
 
   const recipeRating = document.querySelector(".rating_review");
-  recipeRating.innerHTML = `<h2>${recipe.rating} (${recipe.reviewCount} reviews)</h2>`;
+  recipeRating.innerHTML = `<h2>★ ${recipe.rating} (${recipe.reviewCount} reviews)</h2>`;
   //info
   const info = document.querySelector(".recipe_info");
   info.innerHTML = `
-        <h3>${recipe.mealType}</h3>
+        <h3>${recipe.mealType} </h3>
         <h3>Difficulty: ${recipe.difficulty}</h3>
         <h3>Cuisine: ${recipe.cuisine}</h3>
         `;
@@ -35,8 +35,8 @@ const main = async () => {
         `;
 
   //img
-  const recipeImg = document.querySelector(".recipe_img");
-  recipeImg.innerHTML = `<img src="${recipe.image}" alt="${recipe.name}" class="image">`;
+  const imgCont = document.querySelector(".img_cont");
+  imgCont.innerHTML = `<img src="${recipe.image}" alt="${recipe.name}" class="image">`;
 
   //ingredients
   const recipeIngredients = document.querySelector(".ingredients_list");
