@@ -1,6 +1,5 @@
 const main = async () => {
   const searchParams = new URLSearchParams(window.location.search);
-  //console.log(searchParams.get('id')); // price_descending
   const idRecipe = searchParams.get("id");
   console.log(idRecipe);
 
@@ -9,7 +8,6 @@ const main = async () => {
   const res = await fetch(URL);
   const recipe = await res.json();
   console.log(recipe);
-  //return json;
 
   //title
   const recipeTitle = document.querySelector(".recipe_title");
@@ -17,13 +15,14 @@ const main = async () => {
 
   const recipeRating = document.querySelector(".rating_review");
   recipeRating.innerHTML = `<h2>★ ${recipe.rating} (${recipe.reviewCount} reviews)</h2>`;
+
   //info
   const info = document.querySelector(".recipe_info");
   info.innerHTML = `
         <h3>${recipe.mealType} </h3>
         <h3>Difficulty: ${recipe.difficulty}</h3>
         <h3>Cuisine: ${recipe.cuisine}</h3>
-        `;
+  `;
 
   //boxes
   const boxes = document.querySelector(".recipe_boxes");
@@ -32,7 +31,7 @@ const main = async () => {
         <h4 class="boxes">Cook time: <span class="bold_text">${recipe.cookTimeMinutes} min</span></h4>
         <h4 class="boxes">Servings: <span class="bold_text">${recipe.servings}</span></h4>
         <h4 class="boxes">Calories per serving: <span class="bold_text">${recipe.caloriesPerServing}</span></h4>
-        `;
+  `;
 
   //img
   const imgCont = document.querySelector(".img_cont");
